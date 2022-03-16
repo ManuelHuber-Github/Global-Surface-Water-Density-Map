@@ -8,7 +8,7 @@ The script was written in Python >3.6 (anaconda environment) on
 Distributor ID: Ubuntu
 Description:    Ubuntu 20.04.3 LTS
 Release:        20.04
-Codename:       focal
+Codename:       focal. The scripts further require a Google Earth Engine account to use the cloud computing platfrom (https://earthengine.google.com/). The required python libaries are listed in the requirements.txt. 
 
 Two scripts are provided:
 
