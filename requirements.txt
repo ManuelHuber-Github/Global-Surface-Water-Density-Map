@@ -1,0 +1,17 @@
+
+# Installations necessary - pip
+
+os
+glob
+progressbar
+multiprocessing
+ee
+geemap
+numpy
+matplotlibpandas
+gdal 
+
+# If trouble with gdal installation:
+#https://opensourceoptions.com/blog/how-to-install-gdal-for-python-with-pip-on-windows/
+#https://anaconda.org/conda-forge/gdal
+
