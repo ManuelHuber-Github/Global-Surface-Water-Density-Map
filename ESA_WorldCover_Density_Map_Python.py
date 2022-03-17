@@ -90,7 +90,7 @@ def get_geotiff_gee(dataset,world,name, path, scale_x, name_save, tile_size,numb
                 geometries_new_2  = features_2.toList(5000)#.map(func_yhi)
             
                 
-                for p in range(len(geometries_new.getInfo())):
+                for p in range(len(geometries_new_2.getInfo())):
         
                     roi_2 =ee.Feature(geometries_new_2.getInfo()[p]).geometry()
                     rio_pixels_2 = rio_pixels.clip(roi_2)
