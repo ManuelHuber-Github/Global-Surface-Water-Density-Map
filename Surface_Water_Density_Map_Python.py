@@ -79,15 +79,14 @@ def get_geotiff_gee(dataset,world,name, path, scale_x, name_save, tile_size):
                 
             # Backup download in case there is downloading issue with the set tilesize
             if os.path.exists('{}/Image_Exported_{}_{}_{}_{}.tif'.format(path,scale_x,name_save,j,k)) == False: 
-                features  = roi.coveringGrid(data_pro, 100000)
-                geometries_new  = features.toList(5000)#.map(func_yhi)                
+                features_2  = roi.coveringGrid(data_pro, 200000)
+                geometries_new_2  = features_2.toList(5000)#.map(func_yhi)
                 for p in range(len(geometries_new.getInfo())):
         
-                    roi_2 =ee.Feature(geometries_new.getInfo()[p]).geometry()
+                    roi_2 =ee.Feature(geometries_new_2.getInfo()[p]).geometry()
                     rio_pixels_2 = rio_pixels.clip(roi_2)
                     geemap.ee_export_image(rio_pixels_2 , filename='{}/Image_Exported_Failed_Down_{}_{}_{}_{}_{}.tif'.format(path,scale_x,name_save,j,k,p), scale= scale_x, region = roi_2)
 
-                
     bar.finish()
 
 #####################  Start the first the mining process in Google Earth Engine ##############################
